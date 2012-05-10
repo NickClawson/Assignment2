@@ -9,6 +9,16 @@ var jediMaster = 'Rai Chell',
 ;
 
 //Procedure
+var loginTerminal = function (user){
+	if (user === 'Rai Chell'){
+		console.log('Welcome, Master Rai Chell');
+	}
+	else {
+	console.log("You are not an authorized user!");
+	}
+}
+
+//Boolean Function
 
 
 alert("JavaScript works!");
