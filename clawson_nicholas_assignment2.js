@@ -49,6 +49,10 @@ var countSithFree = function (amountCaptured){
 }
 
 //String Function
-
+var identifyPrisoner = function (user, i){
+	var prisonerName = sithTargets[i];
+	console.log(user + " caught Darth " + prisonerName + "!");
+	return prisonerName;
+}
 
 alert("JavaScript works!");
