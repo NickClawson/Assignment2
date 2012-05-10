@@ -30,4 +30,25 @@ var checkTargets = function (prisoners, list){
 	}
 }
 
+//Number Function
+var countSithFree = function (amountCaptured){
+	var allSith = sithTargets.length;
+	while (amountCaptured < allSith){
+		sithLeft = allSith - amountCaptured;
+		if (sithLeft > 1){
+			console.log("There are " + sithLeft + " Sith to capture!");
+		}
+		else {
+			console.log("There is only " + sithLeft + " Sith to capture!");
+		}
+		console.log("You caught one!");
+		amountCaptured++;
+	}
+	console.log("All Sith captured!");
+	return amountCaptured;
+}
+
+//String Function
+
+
 alert("JavaScript works!");
