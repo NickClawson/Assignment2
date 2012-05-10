@@ -4,7 +4,7 @@
 
 //Variable Declaration and Assignment
 var jediMaster = 'Rai Chell',
-	sithPrisoners = 0,
+	sithPrisoners = 5,
 	sithTargets = ['Teenal','Jax','Trick','Fanad','N\'ix']
 ;
 
@@ -50,10 +50,15 @@ var captureSith = function (sithCaptured){
 }
 
 //String Function
-var identifyLastPrisoner = function (user, i){
-	var prisonerName = sithTargets[i];
-	console.log(user + ' caught Darth ' + prisonerName + '!');
-	return prisonerName;
+var identifyPrisoner = function (hunter, prisoner){
+	var caughtBy = 'Master ' + hunter;
+	if (prisoner === undefined){
+		console.log('There is no prisoner here');
+	}
+	else{
+		console.log('Darth ' + prisoner + ' was captured by ' + caughtBy + '.');
+	}
+	return caughtBy;
 }
 
 //Array Function
@@ -61,7 +66,7 @@ var assignCell = function (cellsNeeded, targets){
 	var prisonCell = [];
 	for (var cellNumber = 0; cellNumber < cellsNeeded; cellNumber++){
 		prisonCell[cellNumber] = cellNumber + 1;
-		console.log('Darth ' + targets[cellNumber] +' has been placed into cell ' + prisonCell[cellNumber] + '!');
+		console.log('Darth ' + targets[cellNumber] +' is in cell ' + prisonCell[cellNumber] + '!');
 	}
 	return prisonCell;
 
@@ -70,9 +75,13 @@ var assignCell = function (cellsNeeded, targets){
 //Return Value Outputs
 loginTerminal(jediMaster);
 console.log('Procedures return no output.')
+console.log(' ');
 console.log('Boolean function returns: ' + checkTargets(sithPrisoners, sithTargets) + '.');
+console.log(' ');
 console.log('Number function returns: ' + captureSith(sithPrisoners) + '.');
-//console.log('String function returns: ' + identifyPrisoner(jediMaster, 
+console.log(' ');
+console.log('String function returns: ' + identifyPrisoner(jediMaster, sithTargets[sithPrisoners]) + '.');
+console.log(' ');
 console.log('Array function returns: ' + assignCell(sithTargets.length, sithTargets) + '.');
 
 alert("JavaScript works!");
