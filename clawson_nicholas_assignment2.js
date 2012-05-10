@@ -57,8 +57,14 @@ var identifyPrisoner = function (user, i){
 }
 
 //Array Function
-var sPrisoner = function (targets){
+var assignCell = function (cellsNeeded, targets){
+	var prisonCell = [];
+	for (var cellNumber = 0; cellNumber < cellsNeeded; cellNumber++){
+		prisonCell[cellNumber] = cellNumber + 1;
+		console.log("Darth " + targets[cellNumber] +" has been placed into cell " + prisonCell[cellNumber] + "!");
+	}
+	return prisonCell;
 
 }
-console.log(captureSith(sithPrisoners));
+
 alert("JavaScript works!");
