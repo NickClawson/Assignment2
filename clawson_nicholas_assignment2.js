@@ -19,6 +19,15 @@ var loginTerminal = function (user){
 }
 
 //Boolean Function
-
+var checkTargets = function (prisoners, list){
+	if (!(prisoners < list.length) || list.length === 0) {
+		console.log("There are currently no targets available.");
+		return false;
+	}
+	else{
+	console.log("There are still targets to capture! Good hunting!");
+	return true;
+	}
+}
 
 alert("JavaScript works!");
