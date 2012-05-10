@@ -14,45 +14,51 @@ var loginTerminal = function (user){
 		console.log('Welcome, Master Rai Chell');
 	}
 	else {
-	console.log("You are not an authorized user!");
+		console.log('You are not an authorized user!');
 	}
 }
 
 //Boolean Function
 var checkTargets = function (prisoners, list){
 	if (!(prisoners < list.length) || list.length === 0) {
-		console.log("There are currently no targets available.");
+		console.log('There are currently no targets available.');
 		return false;
 	}
 	else{
-	console.log("There are still targets to capture! Good hunting!");
-	return true;
+		console.log('There are still targets to capture! Good hunting!');
+		return true;
 	}
 }
 
 //Number Function
-var countSithFree = function (amountCaptured){
+var captureSith = function (sithCaptured){
 	var allSith = sithTargets.length;
-	while (amountCaptured < allSith){
-		sithLeft = allSith - amountCaptured;
+	while (sithCaptured < allSith){
+		sithLeft = allSith - sithCaptured;
 		if (sithLeft > 1){
-			console.log("There are " + sithLeft + " Sith to capture!");
+			console.log('There are ' + sithLeft + ' Sith to capture!');
 		}
 		else {
-			console.log("There is only " + sithLeft + " Sith to capture!");
+			console.log('There is only ' + sithLeft + ' Sith to capture!');
 		}
-		console.log("You caught one!");
-		amountCaptured++;
+		console.log('Sith has been detected nearby! Attack!');
+		console.log('You caught Darth ' + sithTargets[sithCaptured] + '!');
+		sithCaptured++;
 	}
-	console.log("All Sith captured!");
-	return amountCaptured;
+	console.log('All Sith have been captured!');
+	return sithCaptured;
 }
 
 //String Function
 var identifyPrisoner = function (user, i){
 	var prisonerName = sithTargets[i];
-	console.log(user + " caught Darth " + prisonerName + "!");
+	console.log(user + ' caught Darth ' + prisonerName + '!');
 	return prisonerName;
 }
 
+//Array Function
+var sPrisoner = function (targets){
+
+}
+console.log(captureSith(sithPrisoners));
 alert("JavaScript works!");
